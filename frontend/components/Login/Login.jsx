@@ -49,8 +49,8 @@ const Login = ({ onUserSelected }) => {
         setSelectedUser(user);
         localStorage.setItem('selectedUser', JSON.stringify(user));
         
-        // Only fetch account and transaction data for non-Portfolio Manager users
-        if (user.role !== 'Portfolio Manager') {
+        // Only fetch account and transaction data for non-Formulation Specialist users
+        if (user.role !== 'Formulation Specialist') {
             try {
                 const data = await fetchUserData(user.id);
                 localStorage.setItem('accounts', JSON.stringify(data.accounts));
@@ -63,8 +63,8 @@ const Login = ({ onUserSelected }) => {
         // Notify parent component about the selected user
         onUserSelected(user);
         
-        // Redirect if role is Portfolio Manager
-        if (user.role === 'Portfolio Manager') {
+        // Redirect if role is Formulation Specialist
+        if (user.role === 'Formulation Specialist') {
             router.push('/asset-portfolio');
         }
     };
@@ -103,8 +103,8 @@ const Login = ({ onUserSelected }) => {
                     </div>
                 )}
                 <div className={styles.modalMainContent}>
-                    <H2 className={styles.centerText}>Welcome to Leafy Bank</H2>
-                    <Subtitle className={`${styles.weightNormal} ${styles.centerText} mt-2`}>This is a MongoDB demo</Subtitle>
+                    <H2 className={styles.centerText}>Welcome to SkinTwin Form UI</H2>
+                    <Subtitle className={`${styles.weightNormal} ${styles.centerText} mt-2`}>This is a MongoDB demo for skincare formulation</Subtitle>
                     <br />
                     <Description className={styles.descriptionModal}>
                         Please select the user you would like to login as:
@@ -132,7 +132,7 @@ const Login = ({ onUserSelected }) => {
                     </div>
 
                     <Description className={`${styles.descriptionModal} mb-3`}>
-                        Note: Each user has pre-loaded data, such as recent transactions, and opened accounts. This variation is designed to showcase different scenarios, providing a more dynamic and realistic user experience for the demo.
+                        Note: Each user has pre-loaded data, such as recent formulations, ingredient preferences, and skin profiles. This variation is designed to showcase different skincare scenarios, providing a more dynamic and realistic user experience for the demo.
                     </Description>
                 </div>
             </Container>

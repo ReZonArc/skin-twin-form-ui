@@ -11,8 +11,8 @@ import Button from "@leafygreen-ui/button";
 import { Tabs, Tab } from '@leafygreen-ui/tabs';
 //import InfoWizard from "../InfoWizard/InfoWizard";
 import Typewriter from "./Typewriter.jsx";
-import { sendMessagetoReactAgentMarketAssistantChatbot } from "@/lib/api/capital_markets/chatbots/capitalmarkets_react_stock_api";
-import { sendMessagetoReactAgentCryptoAssistantChatbot } from "@/lib/api/capital_markets/chatbots/capitalmarkets_react_crypto_api";
+import { sendMessagetoReactAgentIngredientAssistantChatbot } from "@/lib/api/skincare/chatbots/skincare_react_ingredient_api";
+import { sendMessagetoReactAgentFormulationAssistantChatbot } from "@/lib/api/skincare/chatbots/skincare_react_formulation_api";
 import { usePathname } from "next/navigation";
 import { Combobox, ComboboxOption } from "@leafygreen-ui/combobox";
 
@@ -69,16 +69,16 @@ const ChatbotPortfolio = ({ isOpen, toggleChatbot }) => {
     // Decide suggestions dynamically depending on pathname
     const suggestions = isCrypto
         ? [
-            "Based on overall crypto market situation, how should I position my portfolio?",
-            "Can you search the internet for the latest trends in altcoins like Solana (SOL) and Cardano (ADA)?",
-            "What would be the potential impact of shifting 50% of my Bitcoin holdings into Ethereum?",
-            "What questions have I previously asked you, and which tools have you used to respond to me?"
+            "Based on current skincare trends, how should I formulate for active ingredients?",
+            "What are the latest trends in sustainable and clean beauty ingredients?",
+            "What would be the potential impact of incorporating 2% niacinamide into my vitamin C formulation?",
+            "What questions have I previously asked you, and which formulation tools have you used to help me?"
         ]
         : [
-            "Based on overall market situation, how should I position my portfolio?",
-            "Can you search the internet for the latest trends and sentiment on gold (GLD) and U.S. equities?",
-            "What would be the potential impact of shifting 50% of my equity holdings into gold?",
-            "What questions have I previously asked you, and which tools have you used to respond to me?"
+            "Based on ingredient compatibility, how should I balance my skincare formulation?",
+            "Can you search for the latest research on peptides and retinol combinations?",
+            "What would be the potential impact of adding hyaluronic acid to my anti-aging serum?",
+            "What questions have I previously asked you, and which ingredients have you recommended?"
         ];
 
 
@@ -118,8 +118,8 @@ const ChatbotPortfolio = ({ isOpen, toggleChatbot }) => {
         setIsAsking(true);
         try {
             const apiFunction = isCrypto
-                ? sendMessagetoReactAgentCryptoAssistantChatbot
-                : sendMessagetoReactAgentMarketAssistantChatbot;
+                ? sendMessagetoReactAgentFormulationAssistantChatbot
+                : sendMessagetoReactAgentIngredientAssistantChatbot;
 
             const data = await apiFunction(threadId, query);
             const { final_answer, tool_calls = [] } = data;
@@ -159,7 +159,7 @@ const ChatbotPortfolio = ({ isOpen, toggleChatbot }) => {
                         <div className={styles.chatbotHeader}>
 
                             <div className={styles.centeredHeader}>
-                                <Badge variant="blue" className={styles.badge}>Leafy Portfolio Assistant Agent</Badge>
+                                <Badge variant="blue" className={styles.badge}>SkinTwin Formulation Assistant Agent</Badge>
                             </div>
 
                             <Button
@@ -186,7 +186,7 @@ const ChatbotPortfolio = ({ isOpen, toggleChatbot }) => {
 
                                     <div className={styles.chatbotBody}>
                                         <Body className={styles.introBubble}>
-                                            Hi there! 👋🏻 I’m Leafy Bank’s portfolio assistant, here to help you as the portfolio manager.
+                                            Hi there! 👋🏻 I’m SkinTwin's formulation assistant, here to help you as the skincare formulation specialist.
                                             <br /><br />
                                             I now have ✨<strong> long-term memory</strong> ✨ within each chat session...
                                         </Body>
@@ -292,9 +292,9 @@ const ChatbotPortfolio = ({ isOpen, toggleChatbot }) => {
                                 <Tab name="How to demo">
 
                                     <div className={styles.tab}>
-                                        <Subtitle>Leafy Portfolio Assistant Agent</Subtitle>
+                                        <Subtitle>SkinTwin Formulation Assistant Agent</Subtitle>
                                         <Body>
-                                            Leafy Portfolio Assistant Agent provides portfolio managers with a tool that allows them to quickly access and analyze market data, portfolio performance, news and Reddit insights. It enhances efficiency by providing tailored responses and reducing the time spent solving the complexities behind data retrieval and analysis, enabling improved decision-making with real-time updates and contextually aware interactions.
+                                            SkinTwin Formulation Assistant Agent provides skincare formulation specialists with a tool that allows them to quickly access and analyze ingredient data, formulation compatibility, and skincare research insights. It enhances efficiency by providing tailored responses and reducing the time spent solving the complexities behind ingredient selection and formulation development, enabling improved decision-making with real-time updates and contextually aware skincare interactions.
                                         </Body>
 
                                         <div style={{ marginTop: '1rem' }}>
@@ -433,34 +433,34 @@ const ChatbotPortfolio = ({ isOpen, toggleChatbot }) => {
 
                                         <div style={{ marginTop: '1rem' }}>
 
-                                            <Subtitle>Specialized Financial Tools</Subtitle>
+                                            <Subtitle>Specialized Skincare Formulation Tools</Subtitle>
 
                                             <Body>
 
-                                                The Leafy Portfolio Assistant Agent leverages specialized tools to access and analyze financial data from various sources:
+                                                The SkinTwin Formulation Assistant Agent leverages specialized tools to access and analyze skincare formulation data from various sources:
 
                                                 <br></br>
-                                                <strong>Portfolio-Specific:</strong>
+                                                <strong>Formulation-Specific:</strong>
                                                 <ul>
-                                                    <li><code>market_analysis_reports_vector_search_tool</code>: Retrieves relevant market insights specifically for assets in the current portfolio from the</li>
-                                                    <li><code>market_news_reports_vector_search_tool</code>: Provides recent news summaries and sentiment analysis specifically for portfolio assets from the reports_market_news collection.</li>
-                                                    <li><code>get_portfolio_allocation_tool</code>: Shows the precise distribution of investments across different assets, including ticker symbols, asset descriptions, and allocation percentages.</li>
-                                                    <li><code>get_portfolio_ytd_return_tool</code>: Measures portfolio performance since the beginning of the current year from the portfolio_performance collection.</li>
-                                                    <li><code>get_vix_closing_value_tool</code>: Provides insight into current market volatility levels, serving as a quick indicator of market sentiment and risk.</li>
+                                                    <li><code>ingredient_analysis_reports_vector_search_tool</code>: Retrieves relevant ingredient insights specifically for components in the current formulation from the ingredient database</li>
+                                                    <li><code>skincare_research_reports_vector_search_tool</code>: Provides recent research summaries and efficacy analysis specifically for formulation ingredients from the skincare_research collection.</li>
+                                                    <li><code>get_formulation_composition_tool</code>: Shows the precise distribution of ingredients across different formulation types, including INCI names, concentrations, and compatibility ratings.</li>
+                                                    <li><code>get_formulation_stability_tool</code>: Measures formulation stability and effectiveness over time from the formulation_performance collection.</li>
+                                                    <li><code>get_skin_sensitivity_index_tool</code>: Provides insight into current skin sensitivity trends, serving as a quick indicator of ingredient tolerance and safety.</li>
                                                 </ul>
 
-                                                <strong>Cryptocurrency Portfolio-Specific Tools:</strong>
+                                                <strong>Active Ingredient-Specific Tools:</strong>
                                                 <ul>
-                                                    <li><code>crypto_analysis_reports_vector_search_tool</code>: Retrieves technical analysis and crypto market trends using embeddings from the <code>reports_crypto_analysis</code> collection.</li>
-                                                    <li><code>crypto_news_reports_vector_search_tool</code>: Summarizes crypto-related news and sentiment from the <code>reports_crypto_news</code> collection.</li>
-                                                    <li><code>crypto_social_media_reports_vector_search_tool</code>: Analyzes social media sentiment from platforms like Twitter and Reddit using the <code>reports_crypto_sm</code> collection.</li>
-                                                    <li><code>get_portfolio_allocation_tool</code>: Shows allocation across cryptocurrencies and stablecoins from the <code>crypto_portfolio_allocation</code> collection.</li>
-                                                    <li><code>get_portfolio_ytd_return_tool</code>: Calculates crypto portfolio performance since the beginning of the year.</li>
+                                                    <li><code>active_ingredient_research_vector_search_tool</code>: Retrieves clinical research and efficacy studies using embeddings from the <code>reports_ingredient_research</code> collection.</li>
+                                                    <li><code>skincare_trends_reports_vector_search_tool</code>: Summarizes skincare-related trends and consumer preferences from the <code>reports_skincare_trends</code> collection.</li>
+                                                    <li><code>ingredient_compatibility_reports_vector_search_tool</code>: Analyzes ingredient interactions and compatibility from platforms like scientific journals using the <code>reports_ingredient_compatibility</code> collection.</li>
+                                                    <li><code>get_formulation_composition_tool</code>: Shows allocation across active ingredients and base formulation from the <code>ingredient_formulation_allocation</code> collection.</li>
+                                                    <li><code>get_formulation_stability_tool</code>: Calculates formulation stability performance since formulation creation.</li>
                                                 </ul>
 
-                                                <strong>General Financial Information::</strong>
+                                                <strong>General Skincare Information:</strong>
                                                 <ul>
-                                                    <li><code>tavily_search_tool</code>: Supplements portfolio-specific tools with broader financial data and news via the Tavily API, particularly useful for questions about assets not in the portfolio or general market concepts.</li>
+                                                    <li><code>skincare_research_search_tool</code>: Supplements formulation-specific tools with broader skincare research and ingredient data via research APIs, particularly useful for questions about ingredients not in the current formulation or general skincare concepts.</li>
                                                 </ul>
                                             </Body>
                                         </div>

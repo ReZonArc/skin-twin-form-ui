@@ -1,53 +1,53 @@
-# Leafy Bank UI
+# SkinTwin Form UI
 
-**Leafy Bank UI is the graphical user interface (GUI) for our demo banking application**, showcasing the integration of MongoDB's powerful features tailored specifically for [Financial Services](https://www.mongodb.com/solutions/industries/financial-services). This responsive and intuitive UI allows users to interact with a fully functional demo banking environment, highlighting advanced capabilities like real-time data processing, secure financial transactions, and a seamless user experience. It is designed to demonstrate the potential of building modern, customer-focused financial applications with MongoDB as the backbone.
+**SkinTwin Form UI is the graphical user interface (GUI) for our demo formulating application**, showcasing the integration of MongoDB's powerful features tailored specifically for [SkinCare Services](https://www.mongodb.com/solutions/industries/retail). This responsive and intuitive UI allows users to interact with a fully functional demo skincare formulation environment, highlighting advanced capabilities like real-time ingredient data processing, personalized skincare recommendations, and a seamless user experience. It is designed to demonstrate the potential of building modern, customer-focused skincare applications with MongoDB as the backbone.
 
-Leafy Bank UI features multiple AI-powered assistants that showcase the incorporation of artificial intelligence in financial services. The **Leafy Personal Assistant** provides quick and accurate answers to questions related to personal banking terms, conditions, and account details. Additionally, specialized **Market Assistant** and **Crypto Assistant** chatbots offer intelligent investment guidance for traditional financial markets and cryptocurrency portfolios respectively, demonstrating how AI can enhance both banking and investment experiences.
+SkinTwin Form UI features multiple AI-powered assistants that showcase the incorporation of artificial intelligence in skincare services. The **SkinTwin Personal Assistant** provides quick and accurate answers to questions related to skincare ingredients, formulation guidelines, and product development. Additionally, specialized **Ingredient Assistant** and **Formulation Assistant** chatbots offer intelligent guidance for ingredient selection and skincare product development respectively, demonstrating how AI can enhance both skincare consultation and formulation experiences.
 
 
 ## Components and Features:
 
-Leafy Bank UI is composed of several interconnected features that demonstrate the capabilities of modern banking systems. Users can:
+SkinTwin Form UI is composed of several interconnected features that demonstrate the capabilities of modern skincare formulation systems. Users can:
 
 1. **Select a Demo User**  
-   - Choose from a range of pre-loaded demo users.
-   - Each user has unique data such as recent transactions, account information, and banking scenarios.
-   - Designed to create a dynamic, realistic experience for the demonstration.
+   - Choose from a range of pre-loaded demo users (skincare specialists, formulators, clients).
+   - Each user has unique data such as skin profiles, formulation history, ingredient preferences, and skincare goals.
+   - Designed to create a dynamic, realistic experience for the skincare formulation demonstration.
 
 2. **Check User Profile**  
-   - View the user's essential information and personal details.
+   - View the user's essential information, skin type, concerns, and personal skincare preferences.
 
-3. **Open New Account**  
-   - Showcase the account creation process.
-   - Allows demo users to open new banking accounts effortlessly.
+3. **Create New Formulation**  
+   - Showcase the skincare formulation creation process.
+   - Allows demo users to create new personalized skincare formulations effortlessly.
 
-4. **View Account Cards and Info**  
-   - Display detailed account information, including balances, account numbers, and summaries of opened accounts.
+4. **View Formulation Cards and Info**  
+   - Display detailed formulation information, including ingredient lists, concentrations, and summaries of created products.
 
-5. **Make Account Transfers or Digital Payments**  
-   - Simulate secure financial transactions.
-   - Includes account-to-account transfers or payments between predefined demo users.
+5. **Make Ingredient Adjustments or Formulation Updates**  
+   - Simulate secure formulation modifications.
+   - Includes ingredient substitutions or concentration adjustments between different formulation versions.
 
-6. **Query Transaction Details**  
-   - Access and inspect the code and document generated for recent transactions.
-   - Demonstrates backend integrations and real-time data storage on MongoDB.
+6. **Query Formulation Details**  
+   - Access and inspect the code and document generated for recent formulations.
+   - Demonstrates backend integrations and real-time data storage of skincare data on MongoDB.
 
-7. **Connect with External Institutions**  
-   - Simulates connecting to external financial institutions to retrieve data.
-   - Users securely authorize the retrieval of external accounts (e.g., savings, checking) and financial products (e.g., loans, mortgages) from third-party financial institutions (e.g. banks).
+7. **Connect with External Ingredient Suppliers**  
+   - Simulates connecting to external ingredient suppliers to retrieve data.
+   - Users securely authorize the retrieval of ingredient availability, pricing, and specifications from third-party suppliers.
 
-8. **View Global Financial Summary** 
-   - Provides an aggregated view of a user's financial position, including total balances and debts across internal and external accounts and products.
+8. **View Global Skincare Portfolio** 
+   - Provides an aggregated view of a user's skincare formulations, including ingredient usage patterns and formulation performance across different product types.
 
-9. **Interact with the Leafy Personal Assistant**  
-   - Chat with the AI-powered chatbot.
-   - Get contextual, real-time responses related to banking terms, conditions, accounts, or operational FAQs.
+9. **Interact with the SkinTwin Personal Assistant**  
+   - Chat with the AI-powered skincare chatbot.
+   - Get contextual, real-time responses related to ingredient properties, formulation guidelines, skin compatibility, or skincare FAQs.
 
 10. **Switch Between Demo Users**  
        - Seamlessly switch between pre-selected users.
-       - Validate and test how accounts, transactions, and balances behave within the Leafy Bank ecosystem.
+       - Validate and test how formulations, ingredients, and skin profiles behave within the SkinTwin ecosystem.
 
-11. **Access Investment Portfolios**  
+11. **Access Ingredient Portfolios**  
        - Users can access both traditional assets (stocks and ETFs) and cryptocurrency investment portfolios.
        - Get personalized investment guidance through AI-powered Market Assistant for traditional markets and Crypto Assistant for digital assets.
        - Portfolio allocation is predefined for demo purposes, showcasing how intelligent agents can provide insights on diverse investment options.

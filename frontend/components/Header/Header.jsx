@@ -19,17 +19,17 @@ function Header({ onLogout = () => { } }) {
   const pathname = usePathname();
 
   const [selectedUser, setSelectedUser] = useState(null);
-  const [isPortfolioManager, setIsPortfolioManager] = useState(false);
+  const [isFormulationSpecialist, setIsFormulationSpecialist] = useState(false);
 
   useEffect(() => {
     const storedUserString = localStorage.getItem('selectedUser');
     const user = storedUserString ? JSON.parse(storedUserString) : null;
     setSelectedUser(user);
-    setIsPortfolioManager(user?.role === 'Portfolio Manager');
+    setIsFormulationSpecialist(user?.role === 'Formulation Specialist');
   }, []);
 
   console.log("Selected user:", selectedUser);
-  console.log("Is portfolio manager:", isPortfolioManager);
+  console.log("Is formulation specialist:", isFormulationSpecialist);
 
   // Updated handleLogout function
   const handleLogout = (e) => {
@@ -67,12 +67,12 @@ function Header({ onLogout = () => { } }) {
           </Link>
         )} */}
 
-        {!isPortfolioManager && (
+        {!isFormulationSpecialist && (
           <Link
             href="/"
             className={`${styles.navLink} ${pathname === '/' ? styles.activeLink : ''}`}
           >
-            <Body className={styles.navLinkText}>Accounts & Transactions</Body>
+            <Body className={styles.navLinkText}>Skin Profiles & Formulations</Body>
           </Link>
         )}
 
@@ -80,14 +80,14 @@ function Header({ onLogout = () => { } }) {
           href="/asset-portfolio"
           className={`${styles.navLink} ${pathname === '/asset-portfolio' ? styles.activeLink : ''}`}
         >
-          <Body className={styles.navLinkText}>Stock Investment</Body>
+          <Body className={styles.navLinkText}>Ingredient Portfolio</Body>
         </Link>
 
         <Link
           href="/crypto-portfolio"
           className={`${styles.navLink} ${pathname === '/crypto-portfolio' ? styles.activeLink : ''}`}
         >
-          <Body className={styles.navLinkText}>Crypto Investment</Body>
+          <Body className={styles.navLinkText}>Active Formulations</Body>
         </Link>
 
         {/* Updated Mobile Logout - Directly using onClick */}
