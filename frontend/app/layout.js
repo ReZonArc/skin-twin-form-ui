@@ -5,8 +5,8 @@ import { GeistSans } from "geist/font/sans";
 
 // This metadata is automatically applied to the head of your page.
 export const metadata = {
-  title: "Leafy Bank",
-  description: "A demo banking app showcasing the power of MongoDB features."
+  title: "SkinTwin Form UI",
+  description: "A demo skincare formulation app showcasing the power of MongoDB features."
 };
 
 export default function RootLayout({ children }) {

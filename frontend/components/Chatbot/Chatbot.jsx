@@ -13,8 +13,8 @@ import InfoWizard from "../InfoWizard/InfoWizard";
 import Typewriter from "./Typewriter.jsx";
 
 const Chatbot = ({ isOpen, toggleChatbot }) => {
-    const industry = "fsi";
-    const demo_name = "leafy_bank_assistant";
+    const industry = "skincare";
+    const demo_name = "skintwin_formulation_assistant";
     const [query, setQuery] = useState("");
     const [messages, setMessages] = useState([]);
     const [answer, setAnswer] = useState("");
@@ -28,11 +28,11 @@ const Chatbot = ({ isOpen, toggleChatbot }) => {
     };
 
     const handleSuggestionOne = () => {
-        setQuery("Can I overdraft my account for payments and transfers?");
+        setQuery("What ingredients are best for sensitive skin formulations?");
     };
 
     const handleSuggestionTwo = () => {
-        setQuery("Am I going to be notified when overdraft interests will be charged?");
+        setQuery("How do I ensure ingredient compatibility in anti-aging formulations?");
     };
 
     const formatAnswer = (text) => {
@@ -161,7 +161,7 @@ const Chatbot = ({ isOpen, toggleChatbot }) => {
                             </IconButton>
                         </div>
                         <div className={styles.chatbotBody}>
-                            <Body className={styles.introBubble}>Hi there! I'm the Leafy Bank's personal assistant, feel free to ask me any questions regarding Leafy Bank's Terms and Conditions.</Body>
+                            <Body className={styles.introBubble}>Hi there! I'm SkinTwin's personal assistant, feel free to ask me any questions regarding skincare formulation guidelines, ingredient compatibility, and product development.</Body>
 
                             {messages.map((message, index) => (
                                 <div key={index} className={styles.chatMessage}>
@@ -199,10 +199,10 @@ const Chatbot = ({ isOpen, toggleChatbot }) => {
                         <div className={styles.suggestedQuestions}>
                             <Body>Suggested Questions:</Body>
                             <button className={styles.suggestion} onClick={handleSuggestionOne}>
-                                Can I overdraft my account for payments and transfers?
+                                What ingredients are best for sensitive skin formulations?
                             </button>
                             <button className={styles.suggestion} onClick={handleSuggestionTwo}>
-                                Am I going to be notified when overdraft interests will be charged?
+                                How do I ensure ingredient compatibility in anti-aging formulations?
                             </button>
                         </div>
                         <div className={styles.chatbotInputArea}>
