@@ -437,7 +437,7 @@ export default function Assets() {
     return (
         <div className={styles.container}>
             <div className={styles.assetsHeader}>
-                <H3>Stock Portfolio</H3>
+                <H3>Ingredient Portfolio</H3>
 
                 <InfoWizard
                     open={openHelpModal}
@@ -499,30 +499,30 @@ export default function Assets() {
                                             <br>
                                             This solution is divided into three core services: 
                                                 <ol>
-                                                    <li>Capital Markets Loaders Service</li>
-                                                    <li>Capital Markets Agents Service</li>
-                                                    <li>Market Assistant ReAct Agent Chatbot</li>
+                                                    <li>Skincare Data Loaders Service</li>
+                                                    <li>Formulation Analysis Agents Service</li>
+                                                    <li>Ingredient Assistant ReAct Agent Chatbot</li>
                                                 </ol>
                                         </p>
                                         <p>
                                             This section of the demo focuses on the first two:
                                             <br>
-                                                <br><strong>1. Capital Markets Loaders Service</strong> 
+                                                <br><strong>1. Skincare Data Loaders Service</strong> 
                                             <br>
                                             This service is in charge of extracting, transforming, and loading data from these three sources into MongoDB Atlas for further analysis:
                                             <ul>
-                                                <li><strong>Yahoo Finance Market Data</strong> - updated weekly from Tue to Sat at 4 am UTC.</li> 
-                                                <li><strong>FRED API Macroeconomic Data</strong> - updated daily at 4:05 am UTC.</li>
-                                                <li><strong>Financial news from a web scraping process</strong> - one time only, it is a fixed dataset.</li>
-                                                <li><strong>Portfolio performance (emulation)</strong> - updated daily at 4:10 am UTC.</li>
+                                                <li><strong>Ingredient Database API</strong> - updated weekly with new ingredient data at 4 am UTC.</li> 
+                                                <li><strong>Skincare Research API</strong> - updated daily with clinical study results at 4:05 am UTC.</li>
+                                                <li><strong>Consumer reviews from web scraping process</strong> - one time only, it is a fixed dataset.</li>
+                                                <li><strong>Formulation performance (tracking)</strong> - updated daily at 4:10 am UTC.</li>
                                             </ul>
                                             <p>
-                                                <strong>2. Capital Markets Agents Service </strong>
+                                                <strong>2. Formulation Analysis Agents Service </strong>
                                                 <br> 
                                                 After the data is stored into MongoDB, two scheduled agents perform a series of operations to analyze the data and generate insights and store the reports into MongoDB Atlas: 
                                                 <ul>
-                                                    <li><strong>Market Analysis Agent</strong>: Analyzes asset trends, macroeconomic indicators, and market volatility to generate portfolio insights and recommendations. Executed on daily basis at 5 am UTC.</li>
-                                                    <li><strong>Market News Agent</strong>: Processes financial news, performs sentiment analysis, and produces summarized market news intelligence. Executed on daily basis at 5:10 am UTC.</li> 
+                                                    <li><strong>Ingredient Analysis Agent</strong>: Analyzes ingredient trends, compatibility data, and skin sensitivity to generate formulation insights and recommendations. Executed on daily basis at 5 am UTC.</li>
+                                                    <li><strong>Consumer Sentiment Agent</strong>: Processes skincare reviews, performs sentiment analysis, and produces summarized consumer intelligence. Executed on daily basis at 5:10 am UTC.</li> 
                                                 </ul>
                                                 <br>
                                             </p>
@@ -552,7 +552,7 @@ export default function Assets() {
                             content: [
                                 {
                                     heading: "Flexibility",
-                                    body: "MongoDB’s flexible document model unifies structured (macroeconomic indicators and market data) and unstructured data (financial news) into a single data platform that integrates with agentic AI not only to understand and respond to complex queries, but also generate valuable insights for enhanced portfolio management.",
+                                    body: "MongoDB’s flexible document model unifies structured (ingredient data and formulation parameters) and unstructured data (consumer reviews and research papers) into a single data platform that integrates with agentic AI not only to understand and respond to complex queries, but also generate valuable insights for enhanced skincare formulation management.",
                                 },
                                 {
                                     heading: "Time Series collections",
@@ -560,7 +560,7 @@ export default function Assets() {
                                 },
                                 {
                                     heading: "Vector Search",
-                                    body: "Atlas Vector Search empowers the chatbot to efficiently store and query high-dimensional embeddings, enabling it to deliver contextually accurate and relevant responses. Making AI-driven interactions within the Leafy Bank ecosystem both fast and reliable."
+                                    body: "Atlas Vector Search empowers the chatbot to efficiently store and query high-dimensional embeddings, enabling it to deliver contextually accurate and relevant responses. Making AI-driven interactions within the SkinTwin ecosystem both fast and reliable."
                                 },
                                 {
                                     heading: "Atlas Charts",
@@ -577,16 +577,16 @@ export default function Assets() {
             </div>
 
             <div className={styles.headerRow}>
-                <span>SYMBOL</span>
-                <span>ASSET TYPE</span>
-                <span>CLOSE PRICE ($)</span>
-                <span>ALLOCATION</span>
-                <span>NEWS SENTIMENT SCORE</span>
-                <span>SOCIAL SENTIMENT SCORE</span>
-                <span>VIX SENSITIVITY</span>
-                <span>GDP</span>
-                <span>INTEREST RATE</span>
-                <span>UNEMPLOYMENT</span>
+                <span>INGREDIENT CODE</span>
+                <span>INGREDIENT TYPE</span>
+                <span>CONCENTRATION (%)</span>
+                <span>FORMULATION</span>
+                <span>RESEARCH SENTIMENT</span>
+                <span>CONSUMER SENTIMENT</span>
+                <span>SKIN SENSITIVITY</span>
+                <span>ANTI-AGING</span>
+                <span>HYDRATION</span>
+                <span>ACNE TREATMENT</span>
                 <span>ACTIONS</span>
             </div>
 

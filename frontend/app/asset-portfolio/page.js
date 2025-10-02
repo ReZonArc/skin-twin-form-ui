@@ -155,7 +155,7 @@ export default function AssetPortfolio() {
     return (
         <div className={styles.container}>
 
-            <H2> Stock Investment </H2>
+            <H2> Ingredient Portfolio </H2>
             
             <Header className={styles.navBar} onLogout={handleLogout} />
 
@@ -166,12 +166,12 @@ export default function AssetPortfolio() {
                 title="Demo Disclaimer"
                 buttonText="I Agree"
             >
-                The content of this page is for information, training and demonstration purposes and not intended as an investment advice.
+                The content of this page is for information, training and demonstration purposes and not intended as professional skincare formulation advice.
             </ConfirmationModal>
 
             <div className={styles.gridContainer}>
                 <Card className={styles.roiCard} title="ROI">
-                    <Subtitle className={styles.cardSubtitle}>Portfolio Performance</Subtitle>
+                    <Subtitle className={styles.cardSubtitle}>Formulation Performance</Subtitle>
                     <div className={styles.roiHeader}>
                         <SegmentedControl
                             followFocus={true}
@@ -229,9 +229,9 @@ export default function AssetPortfolio() {
                     */}
 
                     <div className={styles.pieCharts}>
-                        <Card className={styles.assetCard} title="Asset Distribution">
+                        <Card className={styles.assetCard} title="Ingredient Distribution">
 
-                            <Subtitle className={styles.cardSubtitle}>Asset Distribution by Symbol</Subtitle>
+                            <Subtitle className={styles.cardSubtitle}>Ingredient Distribution by Type</Subtitle>
                             <div className={styles.iframeContainer}>
                                 <iframe
                                     src="https://charts.mongodb.com/charts-jeffn-zsdtj/embed/charts?id=cd8d523c-b90a-4a39-a447-2e53cd392924&maxDataAge=3600&theme=light&autoRefresh=true"
@@ -241,9 +241,9 @@ export default function AssetPortfolio() {
                             </div>
 
                         </Card>
-                        <Card className={styles.assetCard} title="Asset Distribution">
+                        <Card className={styles.assetCard} title="Ingredient Distribution">
 
-                            <Subtitle className={styles.cardSubtitle}>Asset Distribution by Type</Subtitle>
+                            <Subtitle className={styles.cardSubtitle}>Ingredient Distribution by Function</Subtitle>
 
                             <div className={styles.iframeContainer}>
                                 <iframe
@@ -256,7 +256,7 @@ export default function AssetPortfolio() {
                     </div>
 
                     <Card className={styles.marketCard}>
-                        <Subtitle className={styles.cardSubtitle}>Macroeconomic Indicators</Subtitle>
+                        <Subtitle className={styles.cardSubtitle}>Skincare Trend Indicators</Subtitle>
                         <div className={styles.headerRow}>
                             <span>INDICATOR</span>
                             <span>FREQUENCY</span>
@@ -353,7 +353,7 @@ export default function AssetPortfolio() {
                                 })
                             ) : (
                                 <div className={styles.noData}>
-                                    <Body>No macroeconomic indicators available</Body>
+                                    <Body>No skincare trend indicators available</Body>
                                 </div>
                             )}
                         </div>
@@ -367,7 +367,7 @@ export default function AssetPortfolio() {
                 variant="warning"
                 className={styles.disclaimerBanner}
             >
-                <strong>Important Notice:</strong> The content of this page is for information, training and demonstration purposes and not intended as an investment advice.
+                <strong>Important Notice:</strong> The content of this page is for information, training and demonstration purposes and not intended as professional skincare formulation advice.
             </Banner>
 
             <div className={styles.assetsSection}>
